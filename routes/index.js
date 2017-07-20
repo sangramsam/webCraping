@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
             var $ = cheerio.load(html);
             var desc=$('.small-container').text();
             var title=desc;
-            var heading=$('.heading').text();
+            var heading=$('.aboutus-holder .heading').text();
             var temp={
                 heading:heading,
                 content:desc
@@ -39,7 +39,7 @@ router.get('/', function (req, res, next) {
                 console.log(metadata);
                 //res.send(metadata);
             });*/
-            res.render('index', { title: desc });
+            res.render('index', { title: temp });
         }
 
     });

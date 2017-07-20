@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TEST</title>
+    <title>Test</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <style>
       .hold {
         border: 1px solid #ccc;
-        padding: 10px;
-        width:50%;
+        padding: 20px 15px;
+        width:25%;
+        border-radius: 3px;
       }
       h1 {
+        margin: 0 0 15px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 16px;
+      }
+      h3 {
         width: 97%;
         white-space: nowrap;
+        margin: 0 0 15px;
         text-overflow: ellipsis;
         overflow: hidden;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      a {
+        display: inline-block;
+        font-size: 14px;
+        padding: 10px 15px;
+        background-color: #00B7FF;
+        color: #fff;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <div class="hold">
-      <h1><%= title %></h1>
+      <h1><%= title.heading%></h1>
+      <h3><%= title.content %></h3>
       <a href="/users">View more</a>
     </div>
   </body>
